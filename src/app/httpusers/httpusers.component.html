@@ -1,0 +1,17 @@
+<p>httpusers works!</p>
+
+<button (click)="Showusers()">Users</button>
+<ul>
+    <li *ngFor="let user of users">
+        <div style="background-color: blue; color:whitesmoke">{{user.email}}</div>
+        <!-- <div>{{user.email}}</div> -->
+        <div>{{user.body}}</div>
+
+        <div>{{user.id}}</div>
+        <div>{{user.name}}</div>
+        <div>{{user.zipcode}}</div>
+        <div>{{user.city}}</div>
+        <hr/>
+    </li>
+</ul>
+

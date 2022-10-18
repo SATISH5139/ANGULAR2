@@ -1,0 +1,50 @@
+<!-- <p>use-pipes works!</p> -->
+
+<h3>Working with Pipes</h3>
+<hr/>
+<h4>Date Pipe </h4>
+<P>{{"9/16/2022" | date: 'short'}}</P>
+<P>{{"9/16/2022" | date: 'long' | uppercase}}</P>
+<P>{{"9/16/2022" | date: 'full' | lowercase}}</P>
+<P>{{"9/16/2022" | date: 'medium'}}</P>
+<hr/>
+
+<h4>Decimal Pipe</h4>
+<p>{{3.1412 | number:'2.1-2'}}</p>
+<hr/>
+
+<h4>Percentage Pipe</h4>
+<p>{{45/50 | percent:'2.1-2'}}</p>
+<hr/>
+<h4>Slice Pipe</h4>
+<p>{{[10,20,30,40] | slice : 1 :40}}</p>
+<hr/>
+
+<h4>Currency Pipe</h4>
+<p>{{1000 | currency : 'INR' }}</p>
+<hr/>
+<h4>Custom Pipe: Reverse</h4>
+<p>{{"satish" | reverse }}</p>
+<div>
+    <input type="text" [(ngModel)]="personName"/>
+    <span style="color: red;">{{personName | reverse}} </span>
+</div>
+<hr/>
+
+<input type="text" [(ngModel)]="searchTerm"/>
+<ul>
+    <li *ngFor="let p of ppl|search:searchTerm">
+        {{p}}
+    </li>
+</ul>
+
+
+
+
+
+
+<!-- 
+    public function Datepipe (value, .....optional){
+
+    }
+ -->

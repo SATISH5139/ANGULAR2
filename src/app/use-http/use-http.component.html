@@ -1,0 +1,13 @@
+<p>use-http works!</p>
+<button (click)="ShowComments()">Comments</button>
+<button (click)="AccessWebApi()">Access Web Api</button>
+<hr/>
+<p>====== Accessing WebApi</p>
+<h5>{{WebApiData | json}}</h5>
+<ul>
+    <li *ngFor="let comment of comments">
+        <div style="background-color: blue; color:whitesmoke">{{comment.email}}</div>
+        <div>{{comment.body}}</div>
+        <hr/>
+    </li>
+</ul>
